@@ -3,7 +3,7 @@
   padding: 20px;
   margin: 150px auto;
   max-width: 800px;
-  border-radius: 0px;
+  border-radius: 20px;
 }
 #bg {
   position: fixed;
@@ -33,4 +33,15 @@
   font-size: 30px;
   font-weight: 300;
   color: #0b5ed7;
+}
+footer {
+  color: #ffff;
+  font-size: 18px;
+  background: rgba(255, 255, 255, 0.34);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.8px);
+  -webkit-backdrop-filter: blur(6.8px);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  line-height: 40px;
 }
