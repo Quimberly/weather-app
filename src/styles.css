@@ -1,0 +1,36 @@
+.weather-app {
+  border: 1px solid;
+  padding: 20px;
+  margin: 150px auto;
+  max-width: 800px;
+  border-radius: 0px;
+}
+#bg {
+  position: fixed;
+  top: 1em;
+  left: 30%;
+  right: 30%;
+  bottom: 0;
+  margin: 0 -440px;
+  background-size: cover;
+  z-index: -1;
+  max-width: 1500px;
+}
+#city-input {
+  display: block;
+  line-height: 45px;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  background-color: rgba(155, 199, 235, 0.842);
+  color: #ffff;
+  border-color: transparent;
+}
+#temperature {
+  font-size: 50px;
+  font-weight: 400;
+}
+#measure {
+  font-size: 30px;
+  font-weight: 300;
+  color: #0b5ed7;
+}
