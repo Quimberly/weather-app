@@ -18,6 +18,7 @@
 }
 form {
   display: inline-block;
+  grid-column: auto;
 }
 #city-input {
   line-height: 45px;
@@ -27,6 +28,7 @@ form {
   color: #ffff;
   border-color: transparent;
 }
+
 #temperature {
   font-size: 50px;
   font-weight: 400;
