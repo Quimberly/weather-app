@@ -2,6 +2,7 @@
   border: 1px solid;
   padding: 20px;
   margin: 150px auto;
+  width: 100%;
   max-width: 800px;
   border-radius: 20px;
 }
@@ -20,12 +21,23 @@ form {
   display: inline-block;
 }
 #city-input {
+  display: flex;
+  align-items: center;
   line-height: 45px;
-  padding-bottom: 2px;
-  padding-top: 2px;
-  background-color: rgba(155, 199, 235, 0.842);
+  padding: 0, 5em;
+  background-color: rgba(110, 158, 197, 0.842);
   color: #ffff;
-  border-color: transparent;
+  font-weight: 450;
+  font-size: 18px;
+  border: none;
+  border-radius: 18px;
+}
+button {
+  display: flex;
+  align-items: center;
+  margin: 0.5em;
+  border: none;
+  font-size: 25px;
 }
 
 #temperature {
@@ -38,6 +50,10 @@ form {
   color: #0b5ed7;
 }
 footer {
+  line-height: 40px;
+  max-width: 800px;
+  margin: 150px auto;
+  text-align: center;
   color: rgba(71, 76, 82, 0.952);
   font-size: 18px;
   background: rgba(255, 255, 255, 0.34);
@@ -46,8 +62,4 @@ footer {
   backdrop-filter: blur(4.2px);
   -webkit-backdrop-filter: blur(4.2px);
   border: 1px solid rgba(255, 255, 255, 0.13);
-  line-height: 40px;
-  max-width: 800px;
-  margin: 150px auto;
-  text-align: center;
 }
