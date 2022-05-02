@@ -24,7 +24,7 @@ form {
   display: flex;
   align-items: center;
   line-height: 45px;
-  padding: 0, 5em;
+  padding: 0.5px 15px;
   background-color: rgba(110, 158, 197, 0.842);
   color: #ffff;
   font-weight: 450;
