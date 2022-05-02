@@ -31,6 +31,7 @@ form {
   font-size: 18px;
   border: none;
   border-radius: 18px;
+  outline: none;
 }
 button {
   display: flex;
