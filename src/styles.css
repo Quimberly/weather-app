@@ -1,21 +1,20 @@
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+#bg {
+  visibility: visible;
+  border: none;
+  height: 100%;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 .weather-app {
-  border: 1px solid;
-  padding: 20px;
+  padding: 20px 70px;
   margin: 150px auto;
   width: 100%;
   max-width: 800px;
-  border-radius: 20px;
-}
-#bg {
-  position: fixed;
-  top: 1em;
-  left: 30%;
-  right: 30%;
-  bottom: 0;
-  margin: 0 -440px;
-  background-size: cover;
-  z-index: -1;
-  max-width: 1500px;
 }
 form {
   display: inline-block;
