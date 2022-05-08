@@ -1,4 +1,5 @@
-function formatDate(date) {
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
   let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -7,22 +8,19 @@ function formatDate(date) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  let dayRegister = date.getDay();
+
   let days = [
-    "Sunday",
     "Monday",
     "Tuesday",
     "Wednesday",
     "Thursday",
     "Friday",
     "Saturday",
+    "Sunday",
   ];
-  let day = days[dayRegister];
+  let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
-let dateElement = document.querySelector("#date");
-let currentTime = new Date();
-dateElement.innerHTML = formatDate(currentTime);
 
 function retrievePosition(position) {
   let apiKey = "6d14bf3fa5db85996e16c81f2734587e";
@@ -31,7 +29,6 @@ function retrievePosition(position) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
   axios.get(apiUrl).then(showWeather);
 }
-
 navigator.geolocation.getCurrentPosition(retrievePosition);
 
 function showWeather(response) {
@@ -40,12 +37,14 @@ function showWeather(response) {
   cityElement.innerHTML = response.data.name;
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
-  let dateElement = document.querySelector("#date");
-  dateElement.innerHTML = formatDate(new Date(response.data.dt * 1000));
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.weather[0].description;
   let humidityElement = document.querySelector("#humidity");
   humidityElement = response.data.main.humidity;
   let windyElement = document.querySelector("#windy");
   windyElement = Math.round(response.data.main.wind.speed);
+  let dateElement = document.querySelector("#date");
+  dateElement.innerHTML = formatDate(new Date(response.data.dt * 1000));
 }
 
 function search(event) {
