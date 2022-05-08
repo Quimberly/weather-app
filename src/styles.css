@@ -1,7 +1,6 @@
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
-
 .weather-app {
   display: block;
   padding: 20px 70px;
@@ -9,10 +8,6 @@ body {
   width: 100%;
   max-width: 800px;
   background-color: transparent;
-}
-#bg {
-  background-size: cover;
-  position: fixed;
 }
 form {
   display: inline-block;
@@ -46,6 +41,20 @@ button {
   font-size: 30px;
   font-weight: 300;
   color: #0b5ed7;
+}
+.future-forecast {
+  background: Orgba(24, 24, 27, 0.8);
+  padding: 25px;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  color: rgb(14, 13, 13);
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.future-forecast .weather-forecast {
+  display: flex;
 }
 footer {
   line-height: 40px;
