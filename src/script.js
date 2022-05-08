@@ -43,25 +43,29 @@ function showWeather(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-function search(event) {
-  event.preventDefault();
+function search(city) {
   let apiKey = "6d14bf3fa5db85996e16c81f2734587e";
   let city = document.querySelector("#city-input").value;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showWeather);
 }
 
-function convertFahrenheit(event) {
+function handlesubmit(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#city-input");
-  search(cityInputElement.value, "imperial");
+  search(cityInputElement.value);
+  console.log(cityInputElement.value);
 }
 
 let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", search);
+searchForm.addEventListener("submit", handlesubmit);
+
+function convertFahrenheit(event) {
+  event.preventDefault();
+}
 
 let celsius = document.queryselector("#celsius");
-celsius.addEventListener("click", search);
+celsius.addEventListener("click", handlesubmit);
 
 let fahrenheit = document.querySelector("#fahrenheit");
 fahrenheit.addEventListener("click", convertFahrenheit);
