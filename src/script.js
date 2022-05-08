@@ -35,15 +35,17 @@ function retrievePosition(position) {
 navigator.geolocation.getCurrentPosition(retrievePosition);
 
 function showWeather(response) {
-  let h1 = document.querySelector("h1");
-  h1.innerHTML = `${response.data.name}`;
-  let span = document.querySelector("span");
-  let temperature = Math.round(response.data.main.temp);
-  span.innerHTML = `${temperature}`;
-  let li = document.querySelector("li");
-  li.innerHTML = formatDate(new Date(response.data.dt * 1000));
-  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#windy").innerHTML = response.data.main.windy;
+  console.log(response.data);
+  let cityElement = document.querySelector("#city");
+  cityElement.innerHTML = response.data.name;
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  let dateElement = document.querySelector("#date");
+  dateElement.innerHTML = formatDate(new Date(response.data.dt * 1000));
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement = response.data.main.humidity;
+  let windyElement = document.querySelector("#windy");
+  windyElement = Math.round(response.data.main.wind.speed);
 }
 
 function search(event) {
