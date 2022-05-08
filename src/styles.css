@@ -111,18 +111,19 @@ button {
 
 footer {
   line-height: 40px;
-  position: absolute;
+  position: relative;
   width: 700px;
   height: 120px;
-  left: 420px;
-  bottom: 42px;
+  left: 800px;
+  bottom: auto;
   text-align: center;
-  color: rgba(71, 76, 82, 0.952);
+  color: rgba(193, 200, 207, 0.952);
   font-size: 18px;
-  background: rgba(255, 255, 255, 0.34);
-  border-radius: 10px;
+  /* From https://css.glass */
+  background: rgba(75, 84, 46, 0.22);
+  border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(4.2px);
-  -webkit-backdrop-filter: blur(4.2px);
-  border: 1px solid rgba(255, 255, 255, 0.13);
+  backdrop-filter: blur(8.3px);
+  -webkit-backdrop-filter: blur(8.3px);
+  border: 1px solid rgba(75, 84, 46, 0.11);
 }
