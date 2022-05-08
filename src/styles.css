@@ -16,10 +16,10 @@ body {
   display: block;
   padding: 20px 70px;
   border-radius: 5px;
-  border: 3px solid rgb(175, 174, 174);
+  border: 2px solid rgb(175, 174, 174);
   background: transparent;
   position: relative;
-  margin: -1300px auto 0 500px;
+  margin: -1500px auto 0 280px;
   color: #eee;
 }
 form {
@@ -117,7 +117,7 @@ footer {
   position: relative;
   width: 700px;
   height: 120px;
-  left: 800px;
+  left: 550px;
   bottom: auto;
   text-align: center;
   color: rgba(193, 200, 207, 0.952);

@@ -24,24 +24,15 @@ let dateElement = document.querySelector("#date");
 let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", search);
-
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = "#temperatur";
+function retrievePosition(position) {
+  let apiKey = "6d14bf3fa5db85996e16c81f2734587e";
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+  axios.get(apiUrl).then(showWeather);
 }
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
-function convertToCelsius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = "#temperatur";
-}
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertToCelsius);
+navigator.geolocation.getCurrentPosition(retrievePosition);
 
 function showWeather(response) {
   let h1 = document.querySelector("h1");
@@ -54,6 +45,7 @@ function showWeather(response) {
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#windy").innerHTML = response.data.main.windy;
 }
+
 function search(event) {
   event.preventDefault();
   let apiKey = "6d14bf3fa5db85996e16c81f2734587e";
@@ -61,12 +53,18 @@ function search(event) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showWeather);
 }
-function retrievePosition(position) {
-  let apiKey = "6d14bf3fa5db85996e16c81f2734587e";
-  let lat = position.coords.latitude;
-  let lon = position.coords.longitude;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
-  axios.get(apiUrl).then(showWeather);
+
+function convertFahrenheit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value, "imperial");
 }
 
-navigator.geolocation.getCurrentPosition(retrievePosition);
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", search);
+
+let celsius = document.queryselector("#celsius");
+celsius.addEventListener("click", search);
+
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", convertFahrenheit);
