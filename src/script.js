@@ -54,6 +54,8 @@ function showWeather(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
+  celsiusTemperature = response.data.main.temp;
+
   getForecast(response.data.coord);
 }
 
@@ -74,12 +76,24 @@ function handlesubmit(event) {
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handlesubmit);
 
-function convertFahrenheit(event) {
+function convertFahrenheitTemperature(event) {
   event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
-let celsius = document.queryselector("#celsius");
-celsius.addEventListener("click", handlesubmit);
+function convertCelsiusTemperature(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+let celsiusTemperature = null;
 
-let fahrenheit = document.querySelector("#fahrenheit");
-fahrenheit.addEventListener("click", convertFahrenheit);
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", convertFahrenheitTemperature);
+
+let clesiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", convertCelsiusTemperature);
