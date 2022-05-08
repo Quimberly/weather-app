@@ -9,8 +9,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
-  overflow-x: scroll;
-  overflow-y: scroll;
+  overflow: hidden;
   position: absolute;
 }
 
@@ -21,7 +20,7 @@ body {
   border: 3px solid rgb(175, 174, 174);
   background: transparent;
   position: relative;
-  margin: -1600px auto 0 auto;
+  margin: -1300px auto 0 500px;
   color: #eee;
 }
 form {
@@ -45,7 +44,7 @@ button {
   align-items: center;
   margin: 0.5em;
   border: none;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 #temperature {
@@ -64,7 +63,7 @@ button {
   bottom: 0;
   display: flex;
   color: white;
-  width: 100%;
+  width: 1350px;
   align-items: center;
   justify-content: center;
   overflow-y: hidden;
@@ -76,7 +75,7 @@ button {
 }
 .future-forecast .today .day {
   padding: 5px 15px;
-  background: rgba(137, 142, 148, 0.952);
+  background: rgba(52, 52, 58, 0.8);
   border-radius: 50px;
   text-align: center;
 }
@@ -101,7 +100,7 @@ button {
 
 .weather-forecast .weather-forecast-item .day {
   padding: 5px 15px;
-  background: rgba(137, 142, 148, 0.952);
+  background: rgba(52, 52, 58, 0.8);
   border-radius: 50px;
   text-align: center;
 }
