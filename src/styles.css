@@ -18,8 +18,8 @@ body {
   border-radius: 5px;
   border: 4px solid rgb(175, 174, 174);
   background: transparent;
-  position: relative;
-  margin: -1300px auto 0 500px;
+  position: fixed;
+  margin: -1360px auto 0 350px;
   color: #eee;
 }
 form {
@@ -70,6 +70,7 @@ button {
   align-items: center;
   justify-content: center;
   overflow-y: hidden;
+  margin: auto -230px;
 }
 .future-forecast .today {
   display: flex;
@@ -117,7 +118,7 @@ footer {
   position: relative;
   width: 700px;
   height: 140px;
-  left: 800px;
+  left: 750px;
   bottom: auto;
   text-align: center;
   color: rgba(193, 200, 207, 0.952);
