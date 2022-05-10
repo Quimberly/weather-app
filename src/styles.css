@@ -61,7 +61,7 @@ button {
 }
 .future-forecast {
   background: rgba(24, 24, 27, 0.8);
-  padding: 25px;
+  padding: 18px;
   position: fixed;
   bottom: 0;
   display: flex;
@@ -70,7 +70,7 @@ button {
   align-items: center;
   justify-content: center;
   overflow-y: hidden;
-  margin: auto -71px 249px;
+  margin: auto -71px -2px;
 }
 .future-forecast .today {
   display: flex;
@@ -111,23 +111,4 @@ button {
 
 .weather-forecast .weather-forecast-item .temp {
   font-weight: 100;
-}
-
-footer {
-  line-height: 45px;
-  position: relative;
-  width: 700px;
-  height: 140px;
-  left: 750px;
-  bottom: auto;
-  text-align: center;
-  color: rgba(193, 200, 207, 0.952);
-  font-size: 18px;
-  /* From https://css.glass */
-  background: rgba(33, 120, 44, 0.37);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(33, 120, 44, 0.29);
 }
