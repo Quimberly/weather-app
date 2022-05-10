@@ -44,7 +44,7 @@ function showWeather(response) {
   let humidityElement = document.querySelector("#humidity");
   humidityElement = response.data.main.humidity;
   let windyElement = document.querySelector("#windy");
-  windyElement = Math.round(response.data.main.wind.speed);
+  windyElement = Math.round(response.data.wind.speed);
   let dateElement = document.querySelector("#date");
   dateElement.innerHTML = formatDate(new Date(response.data.dt * 1000));
   let iconElement = document.querySelector("#icon");
@@ -94,5 +94,5 @@ let celsiusTemperature = null;
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertFahrenheitTemperature);
 
-let clesiusLink = document.querySelector("#celsius-link");
+let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertCelsiusTemperature);
