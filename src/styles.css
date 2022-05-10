@@ -113,7 +113,14 @@ button {
   font-weight: 100;
 }
 footer {
-  display: block;
+  position: relative;
+  width: 700px;
+  height: 120px;
+  left: 550px;
+  bottom: auto;
+  text-align: center;
+  color: rgba(193, 200, 207, 0.952);
+  font-size: 18px;
   color: rgba(55, 56, 56, 0.733);
   /* From https://css.glass */
   background: rgba(33, 120, 44, 0.37);
