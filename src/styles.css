@@ -63,8 +63,9 @@ button {
   background: rgba(24, 24, 27, 0.8);
   padding: 18px;
   display: flex;
-  flex-direction: column;
-  margin: auto;
+  position: fixed;
+  bottom: 0;
+  margin: auto -71px -2px;
   color: white;
   width: 1317px;
   align-items: center;
