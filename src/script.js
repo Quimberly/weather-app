@@ -92,10 +92,6 @@ function showWeather(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   let windyElement = document.querySelector("#windy");
   windyElement.innerHTML = Math.round(response.data.wind.speed);
-  let sunriseElement = response.data.sys.sunrise;
-  sunriseElement.innerHTML = document.querySelector("#sunrise");
-  let sunsetElement = response.data.sys.sunset;
-  sunsetElement.innerHTML = document.querySelector("#sunset");
   let dateElement = document.querySelector("#date");
   dateElement.innerHTML = formatDate(new Date(response.data.dt * 1000));
   let iconElement = document.querySelector("#icon");
