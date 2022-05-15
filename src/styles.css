@@ -45,7 +45,7 @@ form {
   background: rgba(51, 51, 56, 0.8);
   padding: 18px;
   width: 280px;
-  height: 100px;
+  height: 200px;
 }
 h1 {
   font-size: 55px;
@@ -67,7 +67,8 @@ button {
   font-weight: 300;
   color: #0b5ed7;
 }
-.future-forecast {
+
+.weather-forecast {
   background: rgba(24, 24, 27, 0.8);
   padding: 18px;
   display: flex;
@@ -80,45 +81,18 @@ button {
   justify-content: center;
   overflow-y: hidden;
 }
-.future-forecast .today {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.future-forecast .today .day {
-  padding: 5px 15px;
-  background: rgba(52, 52, 58, 0.8);
-  border-radius: 50px;
-  text-align: center;
-}
-.future-forecast .today .temp {
-  font-size: 18px;
-  padding-top: 15px;
-}
-.future-forecast .weather-forecast {
-  display: flex;
+
+.weather-forecast-date {
+  font-size: 16px;
+  opacity: 0.5;
 }
 
-.weather-forecast .weather-forecast-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0 10px;
-  border: 1px solid #eee;
-  border-radius: 10px;
-  padding: 5px;
+.weather-forecast-temperature-min {
+  opacity: 0.5;
 }
 
-.weather-forecast .weather-forecast-item .day {
-  padding: 5px 15px;
-  background: rgba(52, 52, 58, 0.8);
-  border-radius: 50px;
-  text-align: center;
-}
-
-.weather-forecast .weather-forecast-item .temp {
-  font-weight: 100;
+.weather-forecast-temperatures {
+  font-size: 13px;
 }
 
 #coded {

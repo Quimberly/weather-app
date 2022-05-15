@@ -9,129 +9,88 @@
       rel="stylesheet"
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
-    /> 
+    />
     <link rel="stylesheet" href="src/styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Weather App</title>
   </head>
   <body>
     <div id="background">
-      <img src="images/Forrest.jpg" alt="Forrest">
+      <img src="images/Forrest.jpg" alt="Forrest" />
     </div>
     <header>
-      
-  <div class="container">
-    <div class="weather-app">
-      <form class="search-form" id="search-form">
-        <div class="row">
-          <div class="col-6">
-						<input type="search"
-						 placeholder="Enter a Cityname..."
-						 autofocus="on"
-						 autocomplete="off"
-						 id="city-input">
-           </div>
-						<div class="col-3">
-               <button type="submit"  value="Submit" class="btn btn-info">Submit</button>
-						</div>
-             <div class="col-3">
-               <button type="current" value="Current" class="btn btn-primary">Current</button>
-           </div>
-          </div>
-      </form>
-       <h1 id="city"></h1>
-        <ul >
-          <li id="date"></li>
-          <li id="description"></li>
-        </ul>
-        <div class="row">
-          <div class="col-6">
-            <img
-              src=""
-              alt="weather icon"
-              id="icon"
-            />
-            <div class="float-left">
-              <span class="temperature" id="temperature"></span>
-              <span class="units" id="measure">
-                <a href="#" id="celsius-link" class="active">°C</a> |
-                <a href="#" id="fahrenheit-link">°F</a>
-              </span>
+      <div class="container">
+        <div class="weather-app">
+          <form class="search-form" id="search-form">
+            <div class="row">
+              <div class="col-6">
+                <input
+                  type="search"
+                  placeholder="Enter a Cityname..."
+                  autofocus="on"
+                  autocomplete="off"
+                  id="city-input"
+                />
+              </div>
+              <div class="col-3">
+                <button type="submit" value="Submit" class="btn btn-info">
+                  Submit
+                </button>
+              </div>
+              <div class="col-3">
+                <button type="current" value="Current" class="btn btn-primary">
+                  Current
+                </button>
+              </div>
             </div>
-          </div>
-          <div class="col-6" id="details">
-            <div class="float-right">
-              <p class="detailed">Humidity: <span id="humidity"></span> %</p>
-              <p class="detailed">Wind Speed: <span id="windy"></span> km/h</p>
-              <p class="detailed">Sunrise: <span id="sunrise"></span> </p>
-              <p class="detailed">Sunset: <span id="sunset"></span> </p>
+          </form>
+          <h1 id="city"></h1>
+          <ul>
+            <li id="date"></li>
+            <li id="description"></li>
+          </ul>
+          <div class="row">
+            <div class="col-6">
+              <img src="" alt="weather icon" id="icon" />
+              <div class="float-left">
+                <span class="temperature" id="temperature"></span>
+                <span class="units" id="measure">
+                  <a href="#" id="celsius-link" class="active">°C</a> |
+                  <a href="#" id="fahrenheit-link">°F</a>
+                </span>
+              </div>
             </div>
-          </div> 
+            <div class="col-6" id="details">
+              <div class="float-right">
+                <p class="detailed">Humidity: <span id="humidity"></span> %</p>
+                <p class="detailed">
+                  Wind Speed: <span id="windy"></span> km/h
+                </p>
+                <p class="detailed">Sunrise: <span id="sunrise"></span></p>
+                <p class="detailed">Sunset: <span id="sunset"></span></p>
+              </div>
+            </div>
           </div>
         </div>
 
-         <div class="link" id="coded">
-        Hosted with
-        <a href="https://www.netlify.com">Netlify</a>,
-        <a href="https://github.com/Quimberly/weather-app-tryout">Open source Code</a>
-         by Kimberly Rileit
-         <br/>
-         Yesterday is history, tomorrow is a mystery. <br/> 
-         But today is a gift, that is why it's called the present!
+        <div class="link" id="coded">
+          Hosted with
+          <a href="https://www.netlify.com">Netlify</a>,
+          <a href="https://github.com/Quimberly/weather-app-tryout"
+            >Open source Code</a
+          >
+          by Kimberly Rileit
+          <br />
+          Yesterday is history, tomorrow is a mystery. <br />
+          But today is a gift, that is why it's called the present!
+        </div>
+        <div class="weather-forecast" id="forecast"></div>
       </div>
-      <div class="future-forecast" id="forecast">
-            <div class="today" id="current-temp">
-              <img src="" alt="weather icon" class="w-icon">
-              <div class="other">
-              <div class="day">Monday</div>
-              <div class="temp">Night - 25.6 °C</div>
-              <div class="temp">Day - 5.6 °C</div>
-              </div>
-            </div>
-            <div class="weather-forecast" id="weather-forecast">
-              <div class="weather-forecast-item">
-                <div class="day">Tue</div>
-                <img src="" alt="weather icon" class="w-icon">
-              <div class="temp">Night - 25.6 °C</div>
-              <div class="temp">Day - 5.6 °C</div>
-              </div>
-              <div class="weather-forecast-item">
-                <div class="day">Wed</div>
-                <img src="" alt="weather icon" class="w-icon">
-              <div class="temp">Night - 25.6 °C</div>
-              <div class="temp">Day - 5.6 °C</div>
-              </div>
-              <div class="weather-forecast-item">
-                <div class="day">Thu</div>
-                <img src="" alt="weather icon" class="w-icon">
-              <div class="temp">Night - 25.6 °C</div>
-              <div class="temp">Day - 5.6 °C</div>
-              </div>
-              <div class="weather-forecast-item">
-                <div class="day">Fri</div>
-                <img src="" alt="weather icon" class="w-icon">
-              <div class="temp">Night - 25.6 °C</div>
-              <div class="temp">Day - 5.6 °C</div>
-              </div>
-              <div class="weather-forecast-item">
-                <div class="day">Sat</div>
-                <img src="" alt="weather icon" class="w-icon">
-              <div class="temp">Night - 25.6 °C</div>
-              <div class="temp">Day - 5.6 °C</div>
-              </div>
-              <div class="weather-forecast-item">
-                <div class="day">Sun</div>
-                <img src="" alt="weather icon" class="w-icon">
-              <div class="temp">Night - 25.6 °C</div>
-              <div class="temp">Day - 5.6 °C</div>
-              </div>
-            </div>
-      </div>
-      </header>
-    
+    </header>
+
     <script src="src/script.js"></script>
     <script>
-      let ApiUrl="https://jsonplaceholder.typicode.com/users"
+      let ApiUrl = "https://jsonplaceholder.typicode.com/users";
     </script>
   </body>
 </html>
